@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import finace from "../../assets/finace.webp";
 import Claim from "./claim";
-import Coverage from "./Coverage";
 import Choose from "./choose";
 import Quote from "./quote";
 import Cube from "../../component/faq";
 import Cta from "../../component/cta";
+import Coverages from "./Coverage";
 
 const Insurance = () => {
   useEffect(() => {
@@ -75,7 +75,7 @@ const Insurance = () => {
       </div>
       <Quote />
       <Claim />
-      <Coverage />
+      <Coverages />
       <Choose />
       <Cube />
       <Cta />
