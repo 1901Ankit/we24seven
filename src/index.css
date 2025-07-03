@@ -31,3 +31,10 @@ body {
   }
 }
 
+.gradient-btn {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}

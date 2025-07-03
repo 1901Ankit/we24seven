@@ -32,7 +32,7 @@ const AppLayout = () => {
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cardetails" element={<CarDetails />} />
+        <Route path="/car/:id" element={<CarDetails />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/personal-information" element={<PersonalInformation />} />

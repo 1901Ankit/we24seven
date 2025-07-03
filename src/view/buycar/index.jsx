@@ -5,7 +5,6 @@ import bmw from "../../assets/bmw.jpg";
 import black from "../../assets/black.jpg";
 import finace from "../../assets/finace.webp";
 import insurance from "../../assets/insurance.jpg";
-import { Link } from "react-router-dom";
 const allCars = [
   {
     id: 1,
@@ -13,9 +12,9 @@ const allCars = [
     brand: "Maruti",
     model: "Swift",
     year: 2023,
-    price: "$7,000",
+    price: "₹7,0000",
     priceValue: 7000,
-    originalPrice: "$8,000",
+    originalPrice: "₹8,000",
     kmDriven: "12,000 km",
     fuelType: "Petrol",
     fuel: "Petrol",
@@ -34,9 +33,9 @@ const allCars = [
     brand: "Hyundai",
     model: "Creta",
     year: 2022,
-    price: "$15,000",
+    price: "₹15,0000",
     priceValue: 15000,
-    originalPrice: "$16,000",
+    originalPrice: "₹16,000",
     kmDriven: "20,000 km",
     fuelType: "Diesel",
     fuel: "Diesel",
@@ -56,9 +55,9 @@ const allCars = [
     brand: "Maruti",
     model: "Swift",
     year: 2023,
-    price: "$7,000",
+    price: "₹7,0000",
     priceValue: 7000,
-    originalPrice: "$8,000",
+    originalPrice: "₹8,000",
     kmDriven: "12,000 km",
     fuelType: "Petrol",
     fuel: "Petrol",
@@ -77,9 +76,9 @@ const allCars = [
     brand: "Hyundai",
     model: "Creta",
     year: 2022,
-    price: "$15,000",
+    price: "₹15,0000",
     priceValue: 15000,
-    originalPrice: "$16,000",
+    originalPrice: "₹16,000",
     kmDriven: "20,000 km",
     fuelType: "Diesel",
     fuel: "Diesel",
@@ -98,9 +97,9 @@ const allCars = [
     brand: "Maruti",
     model: "Swift",
     year: 2023,
-    price: "$7,000",
+    price: "₹7,0000",
     priceValue: 7000,
-    originalPrice: "$8,000",
+    originalPrice: "₹8,000",
     kmDriven: "12,000 km",
     fuelType: "Petrol",
     fuel: "Petrol",
@@ -120,9 +119,9 @@ const allCars = [
     brand: "Hyundai",
     model: "Creta",
     year: 2022,
-    price: "$15,000",
+     price: "₹15,0000",
     priceValue: 15000,
-    originalPrice: "$16,000",
+    originalPrice: "₹16,000",
     kmDriven: "20,000 km",
     fuelType: "Diesel",
     fuel: "Diesel",
@@ -141,9 +140,9 @@ const allCars = [
     brand: "Maruti",
     model: "Swift",
     year: 2023,
-    price: "$7,000",
+    price: "₹7,0000",
     priceValue: 7000,
-    originalPrice: "$8,000",
+    originalPrice: "₹8,000",
     kmDriven: "12,000 km",
     fuelType: "Petrol",
     fuel: "Petrol",
@@ -163,9 +162,9 @@ const allCars = [
     brand: "Hyundai",
     model: "Creta",
     year: 2022,
-    price: "$15,000",
+     price: "₹15,0000",
     priceValue: 15000,
-    originalPrice: "$16,000",
+    originalPrice: "₹16,000",
     kmDriven: "20,000 km",
     fuelType: "Diesel",
     fuel: "Diesel",
@@ -185,9 +184,9 @@ const allCars = [
     brand: "Maruti",
     model: "Swift",
     year: 2023,
-    price: "$7,000",
+    price: "₹7,0000",
     priceValue: 7000,
-    originalPrice: "$8,000",
+    originalPrice: "₹8,000",
     kmDriven: "12,000 km",
     fuelType: "Petrol",
     fuel: "Petrol",
@@ -286,7 +285,7 @@ export default function CarListingPage() {
 
   const FilterContent = ({ isMobile = false }) => (
     <div
-      className={`space-y-6 text-sm px-1 text-gray-700 ${
+      className={`space-y-6 text-sm px-1 text-gray-700 ₹{
         isMobile ? "mt-4" : "mt-3"
       }`}
     >
@@ -377,12 +376,12 @@ export default function CarListingPage() {
       </div>
 
       {/* Apply Buttons */}
-      <div className={`${isMobile ? "flex gap-3" : ""}`}>
+      <div className={`₹{isMobile ? "flex gap-3" : ""}`}>
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={handleApplyFilters}
-          className={`${
+          className={`₹{
             isMobile ? "flex-1" : "w-full"
           } bg-[#3E2AD9] text-white py-3 px-4 rounded-lg  cursor-pointer font-semibold hover:bg-[#2b1bbd] transition-all duration-200`}
         >
@@ -562,12 +561,12 @@ export default function CarListingPage() {
                   <span className="text-red-600 font-bold">⭑ MAX</span>
                   High quality, luxury cars
                 </div>
-                <Link
-                  to="/cardetails"
+                <a
+                  href="/car/:id"
                   className="text-blue-600 hover:underline text-xs font-semibold"
                 >
                   View Details
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}

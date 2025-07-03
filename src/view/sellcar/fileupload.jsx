@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import frontLeft from "../../assets/exterior/frontleft.webp";
 import frontView from "../../assets/exterior/frontview.webp";
@@ -19,6 +19,7 @@ import headlining from "../../assets/interior/ceiling.webp";
 import tyres from "../../assets/wheel/wheel.webp";
 import frontleftTyre from "../../assets/wheel/pneu.webp";
 import Stepper from "./steper";
+import { Link } from "react-router-dom";
 
 const defaultImages = {
   frontLeft,
@@ -42,6 +43,9 @@ const defaultImages = {
 };
 
 const Photo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const inputRefs = useRef({});
   const [imagePreviews, setImagePreviews] = useState(defaultImages);
   const [modalImage, setModalImage] = useState(null);
@@ -89,7 +93,8 @@ const Photo = () => {
             <button
               type="button"
               onClick={() => inputRefs.current[key]?.click()}
-              className="flex-1  py-2 border border-[#2380D9] text-[#2380D9] rounded-md font-medium hover:bg-[#2380D9] hover:text-white transition-colors duration-200  cursor-pointer"
+              className="flex-1  py-2 border border-[#2380D9] text-[#2380D9] rounded-md font-medium
+               hover:bg-[#2380D9] hover:text-white transition-colors duration-200  cursor-pointer"
             >
               {label}
             </button>
@@ -169,7 +174,7 @@ const Photo = () => {
             <div className="bg-white w-full max-w-xl max-h-[90vh] rounded-lg relative overflow-y-auto">
               <button
                 onClick={() => setModalImage(null)}
-                className="absolute top-2 right-2 text-white text-5xl font-semibold cursor-pointer"
+                className="absolute top-2 right-1 text-black text-3xl font-semibold cursor-pointer"
               >
                 &times;
               </button>

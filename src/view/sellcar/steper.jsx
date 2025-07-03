@@ -91,13 +91,7 @@ const Stepper = () => {
               );
             })}
           </div>
-          {location.pathname === "/enhance_stay" && (
-            <Link to="/payment">
-              <button className="w-28 h-10 font-semibold md:flex items-center justify-center text-[13px] bg-[#2380D90F] text-[#2380D9] border border-[#2380D90F] p-2 rounded-[10px] cursor-pointer hidden ">
-                Skip Process
-              </button>
-            </Link>
-          )}
+        
         </div>
       </div>
     </div>

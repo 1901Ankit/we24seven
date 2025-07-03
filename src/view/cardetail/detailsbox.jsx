@@ -10,7 +10,7 @@ const Detailsbox = () => {
       body: "Estate Car",
       doors: 4,
       seats: 5,
-      vin: "SCFBA03C6AC144443",
+      vin: "MATBT123XPTC12345",
     },
     engine: {
       fuel: "LPG",

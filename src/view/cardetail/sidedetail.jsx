@@ -10,7 +10,7 @@ const Sidedetail = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold">Hyundai Creta</h1>
             <p className="text-xl text-gray-800 font-semibold mt-1">
-              €20000.00
+              ₹20000.00
             </p>
           </div>
 
@@ -90,10 +90,10 @@ const Sidedetail = () => {
 
         {/* Sidebar Contact Info Block */}
         <div className="w-full mx-auto p-4 bg-white  rounded-xl space-y-4 h-fit">
-          <div className="space-y-4 text-sm text-gray-800">
+          <div className="space-y-3.5 text-sm text-gray-800">
             {/* CarAudit */}
             <div className="flex justify-between border-b pb-2">
-              <span>
+              <span className="text-lg font-bold">
                 CarAudit<sup>™</sup>
               </span>
               <span className="font-medium text-gray-700">Not Included</span>
@@ -108,7 +108,7 @@ const Sidedetail = () => {
 
             {/* Home Delivery */}
             <div className="flex justify-between border-b pb-2">
-              <span>Home Delivery</span>
+              <span className="text-lg font-bold">Home Delivery</span>
               <span className="font-medium text-gray-700">Not Included</span>
             </div>
 
@@ -121,13 +121,13 @@ const Sidedetail = () => {
 
             {/* Extended Warranty */}
             <div className="flex items-center justify-between">
-              <span className="font-semibold">Extended Warranty</span>
+              <span className="text-lg font-bold">Extended Warranty</span>
               <span className="bg-green-700 text-white text-xs font-bold px-3 py-1 rounded">
                 FREE
               </span>
             </div>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-[14px] text-gray-700">
               When ordering a car, you can choose additional ancillary services.
             </p>
           </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown, X } from "lucide-react";
 import Stepper from "./steper";
+import { Link } from "react-router-dom";
 
 const SellCars = () => {
   useEffect(() => {
@@ -65,7 +66,6 @@ const SellCars = () => {
     <>
       <Stepper />
       <div className="max-w-7xl mx-auto space-y-10 px-4 py-6 text-sm">
-        {/* {" "}
         <div className="mb-2">
           <h2 className="text-4xl font-bold text-gray-800 mb-2">
             Vehicle Specification
@@ -77,12 +77,15 @@ const SellCars = () => {
                 You only need to enter your car's VIN, and we'll immediately
                 retrieve comprehensive details on it from the relevant
                 authority. If any of the information in the authority database
-                is outdated or inaccurate, you may modify them.{" "}
+                is outdated or inaccurate, you <span className="text-red-600 px-1">
+                  may modify
+                  </span> 
+                   them.{" "}
               </p>
             </div>
           </div>
         </div>
-        <div className="border-b border-gray-300 w-full" /> */}
+        <div className="border-b border-gray-300 w-full" />
         {/* Step 1 - VIN */}
         <div>
           <div className="flex items-center space-x-2">
@@ -750,7 +753,7 @@ const SellCars = () => {
           <div className="relative mt-4">
             <input
               type="text"
-              placeholder="Price (in Euro)"
+              placeholder="Price (in Rupees)"
               value={formData.price}
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, price: e.target.value }))
@@ -763,11 +766,11 @@ const SellCars = () => {
           </p>
         </div>
         <div className="text-end">
-          <a href="/personal-information">
+          <Link to="/personal-information">
             <button className="bg-blue-500 text-white px-6 py-3 rounded-md text-sm font-semibold whitespace-nowrap cursor-pointer">
               CONTINUE
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </>

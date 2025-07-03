@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Stepper from "../view/sellcar/steper";
 import { Link } from "react-router-dom";
 
 const PersonalInformation = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

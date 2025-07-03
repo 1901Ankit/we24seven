@@ -14,8 +14,8 @@ const CarDetails = () => {
   const car = {
     id: 1,
     name: "Hyundai Creta",
-    price: "€20000.00",
-    originalPrice: "€22000.00",
+    price: "₹20000.00",
+    originalPrice: "₹22000.00",
     images: [bmw, black, finace, insurance, bmw, black, finace],
     mileage: "21000",
     fuel: "LPG",

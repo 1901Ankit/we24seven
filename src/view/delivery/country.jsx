@@ -1,12 +1,12 @@
 import React from "react";
-import country from "../../assets/country.webp";
+import country from "../../assets/Flag.png";
 
 const Country = () => {
   return (
     <div className="bg-[#F6F8FA] px-6 ">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Column */}
-        <div className="w-full md:w-5/12 space-y-6">
+        <div className="w-full md:w-5/12 space-y-4">
           <h1 className="text-blue-700 text-2xl md:text-4xl font-bold leading-snug">
             Get Your Dream Car Delivered Right to Your Doorstep
           </h1>
@@ -24,7 +24,7 @@ const Country = () => {
         </div>
 
         {/* Right Column */}
-        <div className="w-full md:w-5/12 relative z-10">
+        <div className="w-full md:w-6/12 relative z-10">
           <img
             src={country}
             alt="European Car Delivery"
